@@ -20,7 +20,7 @@ function createPokemonCard(pokemon) {
   const pokemonElement = document.createElement("div"); // de esta forma creo un elemento div en el html que corresponde a cada pokemon
   pokemonElement.classList.add("pokemon"); //agrega una clase a ese elemento creado para poder darle estilos
 
-  const types = pokemon.types.map((typeInfo) => typeInfo.type.name).join(" / ");
+  const types = pokemon.types.map((typeInfo) => typeInfo.type.name).join(" / "); // En el arrray type, le paso como argumento typeInfo para que sea el psudonimo del types y así no repertir. De esta forma agrego todos los que haya más, el método join para unir
   const name = pokemon.name[0].toUpperCase() + pokemon.name.slice(1); //transforma la primera letra en mayuscula y muestra el resto en min
 
   const pokeHTML = `
